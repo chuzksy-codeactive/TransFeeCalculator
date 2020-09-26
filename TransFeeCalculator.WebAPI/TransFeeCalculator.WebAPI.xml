@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TransFeeCalculator.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:TransFeeCalculator.WebAPI.Controllers.SurChargesController.Surcharge(TransFeeCalculator.Application.Models.AmountDTO)">
+            <summary>
+            The method uses the amount configuration file to compute the advised transfer
+            Amount and the amount the customer will be debited.
+            </summary>
+            <param name="amount">The amount of money the customer wants to transfer</param>
+            <returns>Returns a debited info object</returns>
+        </member>
+        <member name="M:TransFeeCalculate.API.Controllers.TranfersController.Transfer(TransFeeCalculator.Application.Models.AmountDTO)">
+            <summary>
+            The method computes the expected charge base on the amount
+            </summary>
+            <remarks>
+            the charge is based on the content of he configuration file.
+            </remarks>
+            <param name="amount">The amount of money the customer wants to transfer</param>
+            <returns>Returns the transaction object</returns>
+        </member>
+    </members>
+</doc>
