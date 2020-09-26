@@ -8,19 +8,18 @@ namespace TransFeeCalculator.Test
     public class TransSurChargeServiceTest
     {
         private Mock<ITransSurChargeService> transSurchargeService;
-        private AmountDTO dto;
 
         [SetUp]
         public void Setup()
         {
             transSurchargeService = new Mock<ITransSurChargeService>();
-            dto = new AmountDTO { Amount = 5000 };
         }
 
         [Test]
         public void TestDebitTransaction_5000()
         {
             //Arrange
+            var dto = new AmountDTO { Amount = 5000 };
             var customerDebit = new CustomerDebitDTO
             {
                 Amount = 5000,
@@ -52,6 +51,7 @@ namespace TransFeeCalculator.Test
                 Charge = 25,
                 DebitAmount = 45000
             };
+            var dto = new AmountDTO { Amount = 45000 };
 
             //Act
             transSurchargeService.Setup(t => t.DebitTransaction(dto)).Returns(customerDebit);
@@ -69,6 +69,7 @@ namespace TransFeeCalculator.Test
         public void TestDebitTransaction_50030()
         {
             //Arrange
+            var dto = new AmountDTO { Amount = 50030 };
             var customerDebit = new CustomerDebitDTO
             {
                 Amount = 50030,
